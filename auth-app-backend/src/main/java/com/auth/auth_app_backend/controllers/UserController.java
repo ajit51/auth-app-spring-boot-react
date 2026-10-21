@@ -3,7 +3,6 @@ package com.auth.auth_app_backend.controllers;
 import com.auth.auth_app_backend.dtos.UserDto;
 import com.auth.auth_app_backend.services.UserService;
 import lombok.AllArgsConstructor;
-import org.apache.coyote.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -49,7 +48,7 @@ public class UserController {
     return ResponseEntity.ok(userService.getUserById(userId));
   }
 
-  //  get all user api
+  // get all user api
   @GetMapping
   public ResponseEntity<Iterable<UserDto>> getAllUsers() {
     return ResponseEntity.ok(userService.getAllUsers());
